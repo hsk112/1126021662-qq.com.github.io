@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;text-decoration: none;}
+			.big_body{width: 100%;overflow-x: hidden;}
+			.top{
+				width: 100%;
+				height: 100px;
+				margin: 0 auto;
+				background-color: white;
+				overflow-x: hidden;
+			}
+			.top img{
+				height:200px;
+				height: 60px;
+				margin-top: 10px;
+				margin-left: 20%;
+			}
+			.bg_dl{
+				width: 100%;
+				height: 600px;
+				background-color: yellow;
+				background-image: url(../img/login_bgimg.jpg);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.login{
+				width: 400px;
+				height: 460px;
+				background-color: white;
+				margin-left: 60%;
+				margin-top: 60px;
+				float: left;
+			}
+			input{
+				margin-top: 40px;
+				width: 300px;
+				height: 34px;
+				margin-left: 50px;
+				outline: none;
+			}
+			input[type="submit"]{ 
+				margin-top: 40px;
+				width: 300px;
+				height: 40px;
+				font-size: 20px;
+				margin-left: 50px;
+				background-color:#357EBD ;
+				color: white;
+				border: none;
+			}
+			/*底部*/
+			.foot{width: 100%;background-color: white;margin-top: 30px;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede;}
+            .foot1{width: 1200px;height: 160px;margin: auto;display: flex;justify-content: space-between;}
+            .foot_ul{float: left;}
+            .foot_ul h4{color: gray;margin-top: 20px;margin-bottom: 10px;}
+            .foot_ul li{line-height: 24px;font-size: 12px;color: gray;}
+            
+            .last{width: 100%;background-color: white;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede;}
+            .last_img{width: 560px;height: 132px;margin: auto;}
+			
+		</style>
+		<script type="text/javascript" src="../js/cookie.js" ></script>
+	</head>
+	<body>
+		<div class="big_body">
+			
+			<div class="top">
+				<img src="../img/logo_01.png" />
+			</div>
+			
+			<div class="bg_dl">
+				<div class="login">
+					<form  action="dl.php">
+					<h2 style="text-align: center;margin-top: 30px;color: #357EBD;">用户登录</h2>	
+			        <input type="text" name="user"placeholder="用户名" class="nm">
+			        <br/>
+			        <input type="password" name="pwd"placeholder="密码">
+			        <br/>
+			        <input type="submit" value="登录" class="dl">
+			        <p style="float: right;margin-right: 50px;margin-top: 30px;"><a href="zc.html">注册账号</a></p>
+			    </form>
+				</div>
+			</div>
+			
+			
+			<div class="foot">
+		<div class="foot1">
+			<ul class="foot_ul">
+				<h4>服务保障</h4>
+				<li>正品保障</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>新手指南</h4>
+				<li>常见问题</li>
+				<li>通关税费</li>
+				<li>支付方式</li>
+				<li>购物流程</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>客服中心</h4>
+				<li>联系客服</li>
+				<li>退换货流程</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>物流配送</h4>
+				<li>物流跟踪</li>
+				<li>配送方式</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>关于我们</h4>
+				<li>关于我们</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>泰国</h4>
+				<li>境内电话：<span style="color: #0B57A3;">1631</span></li>
+				<li>境外拨打：<span style="color: #0B57A3;">+66（0）26778899</span></li>
+				<li>中国：<span style="color: #0B57A3;">400-6301892</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="last">
+		<div class="last_img"><img src="../img/footimg.PNG"></div>
+	</div>
+			
+		</div>
+		<script>
+			
+		</script>
+	</body>
+</html>

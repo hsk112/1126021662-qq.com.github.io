@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style >
+			a{text-decoration: none;}
+			#boss{width: 100%;overflow-x:hidden;background-color: #f1f1f1;}
+			*{margin: 0;padding: 0;}
+			/*顶部通栏*/
+			.boss_dt{width: 100%;position: absolute;top: 0;position: fixed;z-index: 1000;border-bottom: 1px solid #0B57A3;display: none;background-color: #f1f1f1;}
+			.dt{width: 1200px;height: 86px;margin: auto;}
+			.dt1{width: 40px;height: 50px;position: absolute;top: 600px;left: 1800px; position: fixed;z-index: 1000;background-color:#787878;}
+			/*顶部*/
+			.top{width: 100%;height: 34px; background-color: rgb(245,245,245);overflow: hidden;}
+			.top1{width: 1200px;height: 34px; margin: auto;}
+			.left_nav{float: left;}
+			.left_nav li{float: left;font-size: 12px;line-height: 34px;margin-left: 10px;list-style: none;}
+			.right_nav{float: right;}
+			.right_nav li{float: right;font-size: 12px;line-height: 34px;margin-left: 20px; list-style: none;}
+			.right_nav li a{text-decoration: none;}
+			/*搜索购物车导航区域*/
+			.header{width: 100%;}
+			.head{width: 1200px;height: 144px;margin: auto;}
+			.head1{width: 1200px;height: 84px;}
+			.head2{width: 1200px;height: 60px;position: relative;}
+			.logo{width: 200px; height:60px;float: left;margin-top: 12px;}
+			.logo img{width: 100%;height: 100%;}
+			.sou{width: 550px;height: 60px;float: left;margin-top: 14px;margin-left: 100px;}
+			.sous{width: 470px;height: 32px;border: 2px solid rgb(11,86,164);border-right: none;box-sizing:content-box;float: left;outline: none;}
+			.btn{width: 76px;height: 36px;font-size: 16px; float: left;background-color: rgb(2,152,181);color: white;outline: none;cursor: pointer;border: none;font-weight: bold;}
+			.u1{width: 550px;height: 24px;float: left;}
+			.u1 li{float: left;font-size: 12px;margin-right: 11px;list-style: none;line-height: 22px;}
+			.u1 li a{text-decoration: none;color: gray;}
+			.car{width: 128px;height: 34px;border: 1px solid rgb(11,86,164);float: left;margin-top: 14px;margin-left: 30px; position: relative;background-color: whitesmoke;}
+			.car h4{line-height: 34px;text-align: center;}
+			.cars{position: absolute;width: 280px;height: 100px;background-color: whitesmoke;left: -150px;box-shadow: 1px 1px 2px gray; border-top: none;display: none;z-index: 100;}
+			.cars p{line-height: 100px;text-align: center;font-size: 14px;}
+			.car:hover{border: none;}
+			.car:hover .cars{display: block;}
+			.local_sp{width: 200px;height: 60px; background: linear-gradient(#01a8ba,#0a5aa5);position: relative;float: left;}
+			.local_sp p{line-height:60px;text-align: center;color: white;}
+			.host_sp{position: absolute;width: 200px;height: 500px;background-color: rgba(229,229,229,0.3);display: none;z-index: 100;position: relative;}
+			.host_sp li{list-style: none;border-bottom:1px solid gray;width:200px;height:49px;line-height: 49px;text-align: center;}
+			.host_sp li:hover{background-color: rgb(229,229,229);}
+			.host_sp1{width: 1000px;height:500px; position:absolute;background-color: rgb(229,220,229);z-index: 100;display: none;top: 0px;left: 200px;}
+			.u2{float: left;margin-left: 20px;}
+			.u2 li{float: left;line-height: 60px;list-style: none;margin-left: 30px;}
+			.u2 li a{text-decoration: none;color: black;}
+			.u2 li a:hover{color:rgb(2,152,181) ;}
+			/*热门品牌*/
+			.d1{width: 1200px;height: 74px;margin: auto;}
+			.host_pp{float: left;font-size: 24px;line-height: 74px;}
+			.host_pp span{width: 5px;height: 20px;color: #0b57a3;background-color: #0b57a3;margin-right: 5px;}
+			.huanyihuan{float: right;line-height: 74px;cursor: pointer;font-size: 20px;}
+			.host{height: 302px;width: 1200px;margin: auto;}
+			.host_img{height: 302px;width: 522px;float: left;}
+			.logo_imgs{width:678px;height: 302px;float: right;}
+			.logo_img{width: 167px;height: 100px; margin-left: 2px;margin-bottom: 1px;float: left;}
+			.logo_img img{width: 100%;height: 100%;}
+			.img1{display: block;}
+			.img1{display: none;}
+			/*商品列表*/
+			.allsp{width: 1200px;margin: auto;}
+			.rexiao4{width: 1200px;margin: auto;}
+			.rexiao4 img{width: 100%;height: 100%;}
+			
+			/*底部*/
+			.foot{width: 100%;background-color: white;margin-top: 30px;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede;}
+            .foot1{width: 1200px;height: 160px;margin: auto;display: flex;justify-content: space-between;}
+            .foot_ul{float: left;}
+            .foot_ul h4{color: gray;margin-top: 20px;margin-bottom: 10px;}
+            .foot_ul li{line-height: 24px;font-size: 12px;color: gray;}
+            
+            .last{width: 100%;background-color: white;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede;}
+            .last_img{width: 560px;height: 132px;margin: auto;}
+			
+		</style>
+		
+		
+		
+		<script type="text/javascript" src="../js/jquery.js" ></script>
+		<script type="text/javascript" src="../js/cookie.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+		<link rel="stylesheet" href="../css/swiper.min.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		
+	</head>
+	<body>
+		<div id="boss">
+			<!--顶部-->
+			<div class="top">
+				<div class="top1">
+					<ul class="left_nav">
+						<li>King power中文官网<span style="margin-left: 10px;margin-right: 10px;">|</span></li>
+						<li>泰.海淘</li>
+						<li>今日汇率:</li>
+						<li>泰铢<b>—></b>人民币</li>
+						<li>支付宝 0.2212</li>
+						<li>银联 0.2179</li>
+						<li>微信 0.2166<span style="display: inline-block;height: 16px;width: 16px;border-radius: 50%;color: orange; border: 2px solid orange;line-height: 16px;"><b>荐</b></span></li>
+					</ul>
+					
+					<ul class="right_nav">
+						<li><a href="#">手机版</a></li>
+						<li><a href="#">客服中心</a></li>
+						<li><a href="#">个人中心</a></li>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="zc.html">注册</a></li>
+						<li class="a1"style="cursor: pointer;"><!--<a href="dl.html"><span class="span1">登录</span></a>--><span class="span1">登录</span></li>
+				   </ul>
+				</div>
+			</div>
+			<!--顶部-->
+			
+			<!--搜索购物车导航区域-->
+			<div class="header">
+				<div class="head">
+					
+					<div class="head1">
+						<div class="logo"><img src="../img/logo_01.png"></div>
+						<div class="sou">
+							<div>
+							<input type="text" class="sous" placeholder="直播" /><button class="btn">搜索</button>
+							</div>
+							<ul class="u1">
+								<li><a href="#">直播</a></li>
+								<li><a href="#">泰国值得买</a></li>
+								<li><a href="#">乳胶</a></li>
+								<li><a href="#">虎标</a></li>
+								<li><a href="#">燕窝</a></li>
+								<li><a href="#">果干</a></li>
+								<li><a href="#">Kingpower</a></li>
+								<li><a href="#">咖啡</a></li>
+								<li><a href="#">防晒</a></li>
+								<li><a href="#">驱蚊</a></li>
+								<li><a href="#">面膜</a></li>
+								<li><a href="#">Mistine</a></li>
+								<li><a href="#">鼻通</a></li>
+							</ul>
+						</div>
+						<div class="car">
+							<a href="cart.html"><h4>购物车<b class="num">0</b>件</h4></a>
+							<!--<div class="cars"><p>请  <a class="a1" href="dl.html">登录</a> 后查看</p></div>-->
+						</div>
+					</div>
+					
+					<div class="head2">
+						<div class="local_sp"><p>本土商品▽</p>
+								<ul class="host_sp">
+								<li>食品特产</li>
+								<li>粮油调味</li>
+								<li>咖啡冲饮</li>
+								<li>美容护肤</li>
+								<li>彩妆香水</li>
+								<li>居家日用</li>
+								<li>滋补保健</li>
+								<li>服装鞋包</li>
+								<li>家居饰品</li>
+								<li>洗护清洁剂</li>
+								<div class="host_sp1"></div>
+							</ul>
+							
+						</div>
+						
+						<ul class="u2">
+							<li><a href="#">首页</a></li>
+							<li><a href="list.html">热销排行</a></li>
+							<li><a href="#">美容护肤</a></li>
+							<li><a href="#">彩妆香水</a></li>
+							<li><a href="#">咖啡冲饮</a></li>
+							<li><a href="#">神奇药膏</a></li>
+							<li><a href="#">果干零食</a></li>
+							<li><a href="#">一村一品</a></li>	
+				        </ul>
+						
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			<!--搜索购物车区域-->
+			<!--swiper轮播图-->
+			<div style="width:1920px;margin: auto;">
+		<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../img/header_01.jpg"></div>
+        <div class="swiper-slide"><img src="../img/header_02.jpg"></div>
+        <div class="swiper-slide"><img src="../img/header_03.jpg"></div>
+        <div class="swiper-slide"><img src="../img/header_04.jpg"></div>
+        <div class="swiper-slide"><img src="../img/header_02.jpg"></div>
+        <div class="swiper-slide"><img src="../img/header_06.jpg"></div>
+        <div class="swiper-slide"><img src="../img/header_07.jpg"></div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+    <!-- 如果需要导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    
+    <!-- 如果需要滚动条 -->
+   <!-- <div class="swiper-scrollbar"></div>-->
+	</div>
+	</div>
+			<!--swiper轮播图-->
+			
+			<!--热门品牌-->
+	    <div class="d1">
+	    	<p class="host_pp"><span>|</span>热门品牌</p>
+	    	<a class="huanyihuan">换一换</a>
+	    </div>
+	    
+	    <div class="host">
+	    	<div class="host_img">
+	    	<div class="swiper-container">
+        <div class="swiper-wrapper"style="width: 522px;height: 302px;">
+        <div class="swiper-slide"><img src="../img/host_img01.jpg"></div>
+        <div class="swiper-slide"><img src="../img/host_img02.jpg"></div>
+       </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    
+	</div>
+	</div>
+	    
+	    <div class="logo_imgs">
+	    	<div class="img1">
+	    	<div class="logo_img"><img src="../img/host_log01.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log02.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log03.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log04.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log05.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log06.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log07.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log08.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log09.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log10.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log11.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log12.jpg"></div>
+	    	</div>
+	    	<div class="img2">
+	    	<div class="logo_img"><img src="../img/host_log13.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log14.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log15.jpg"></div>
+	    	<div class="logo_img"><img src="../img/host_log10.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/15/a5/15a50417bec89db8a99c25b254ec84d9.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/8a/7d/8a7d546604141facd6c6def86ad879eb.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/7c/a4/7ca480dc24d25cad3009c3c95a50e769.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/2a/46/2a460dfffaa776bd851c5c389dcd4980.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/1a/e8/1ae8f73b1b38a84c26cf744b80555ea5.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/24/04/24046379a1350d4f2bc781c2c1776572.png"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/48/d6/48d60f0ac24eab076927048ea0775116.jpg"></div>
+	    	<div class="logo_img"><img src="https://upload.taihaitao.com/image/01/a8/01a85d70f012ac7a81d52f16fe92c28f.jpg"></div>
+	    	</div>
+	    	
+	    </div>
+	    </div>
+	    <!--热门品牌-->
+	    
+	   <!-- 商品列表-->
+	    <div class="container">
+	        <div class="row"></div>
+        </div>
+     <!-- 商品列表-->
+     <div class="allsp">
+     	 <div class="d1">
+	    	<p class="host_pp"><span>|</span>热销排行</p>
+	    	<a class="huanyihuan"href="list.html">更多></a>
+	    </div>
+	    <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/6a/fc/6afc57a622f98b27e358564e3b3604cf.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>140.00</p>
+             <p>(约￥30.49)</p>
+             <s><p style="color:red">原价:175.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=1" class="looksp" role="button" data-id="1">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/2d/3c/2d3c39075ea702a619af4da8be5b2066.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LORCD AGDL</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>193.00</p>
+             <p>(约￥42.03)</p>
+             <s><p style="color:red">原价:241.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=5" class="looksp" role="button" data-id="5">查看商品</a></p>
+	    </div>
+	     <div class="rexiao2">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/85/8c/858ca2024bcb351bc95f819dd212b592.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">SIANG PURE OIL</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>99.00</p>
+             <p>(约￥21.56)</p>
+             <s><p style="color:red">原价:110.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=2" class="looksp" role="button" data-id="2">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/a8/5a/a85aef62abbd2e78511306120cc5d359.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">HUSFG SHDU</h4>
+	        <h5 class="jieshao">【保税发货】HUSFG SHDU值得信赖的良心好产品</h5>
+	    	 <p>153.00</p>
+             <p>(约￥33.2)</p>
+             <s><p style="color:red">原价:306.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=6" class="looksp" role="button" data-id="6">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/8e/01/8e01038e0dc05535457ac42aa423fc53.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">DUIEH DJDG</h4>
+	        <h5 class="jieshao">【保税发货】DUIEH DJDG值得信赖的良心好产品</h5>
+	    	 <p>210.00</p>
+             <p>(约￥45.57)</p>
+             <s><p style="color:red">原价:241.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=7" class="looksp" role="button" data-id="7">查看商品</a></p>
+	    </div>
+	     <div class="rexiao2">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/53/b7/53b71c8289eb4066a23812c56689e9af.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">PEPPERMINT FIELD</h4>
+	        <h5 class="jieshao">【保税发货】PEPPERMINT FIELD值得信赖的良心好产品</h5>
+	    	 <p>116.00</p>
+             <p>(约￥25.17)</p>
+             <s><p style="color:red">原价:137.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=4" class="looksp" role="button" data-id="4">查看商品</a></p>
+	    </div>
+     	<div class="rexiao3"><a href="list.html"><img src="https://upload.taihaitao.com/image/ae/8c/ae8c289a8a0d245c87fa6af71d215277.jpg"></a>
+     	<a href="list.html"><img src="https://upload.taihaitao.com/image/f9/7d/f97dedc2cd8fbaaaefa2b8c3cd4e3bef.jpg" style="float: right;"></a>
+     	</div>
+     	
+     	 <div class="d1">
+	    	<p class="host_pp"><span>|</span>美容护肤</p>
+	    	<a class="huanyihuan"href="list.html">更多></a>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/40/d5/40d5f54da0ab38a76dc504b8d8306b9f.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS1</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>520.00</p>
+             <p>(约￥112.94)</p>
+             <s><p style="color:red">原价:650.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=100" class="looksp" role="button" data-id="100">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/47/39/4739f4c108e43766b18a224e0873b8b6.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS2</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>359.00</p>
+             <p>(约￥77.97)</p>
+             <s><p style="color:red">原价:399.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=101" class="looksp" role="button" data-id="101">查看商品</a></p>
+	    </div>
+	     <div class="rexiao2">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/3b/9a/3b9a3be775fb65fe03cd15e83aac0e88.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS3</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>1454.00</p>
+             <p>(约￥315.78)</p>
+             <s><p style="color:red">原价:2237.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=102" class="looksp" role="button" data-id="102">查看商品</a></p>
+	    </div>
+	    
+	    <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/90/2b/902b3d4a6974ab561ce364a6bb659c09.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS4</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>258.00</p>
+             <p>(约￥56.94)</p>
+             <s><p style="color:red">原价:322.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=103" class="looksp" role="button" data-id="103">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/86/c3/86c37ff933606ecf720719a6280fa19e.png@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS5</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>2341.00</p>
+             <p>(约￥508.97)</p>
+             <s><p style="color:red">原价:3121.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=104" class="looksp" role="button" data-id="104">查看商品</a></p>
+	    </div>
+	     <div class="rexiao2">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/01/e7/01e7acc19fbdc565295b168160e995a1.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">LOREAL PARIS6</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>602.00</p>
+             <p>(约￥130.78)</p>
+             <s><p style="color:red">原价:802.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=105" class="looksp" role="button" data-id="105">查看商品</a></p>
+	    </div>
+	    <div class="rexiao4">
+	    <a href="list.html"><img src="https://upload.taihaitao.com/image/08/3c/083cc88ad90d3856a4c78cfa5e554270.jpg"></a>
+     	</div>
+	    
+     	 <div class="d1">
+	    	<p class="host_pp"><span>|</span>居家日用</p>
+	    	<a class="huanyihuan"href="list.html">更多></a>
+	    </div>
+        
+	    <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/c0/ba/c0ba214daad48cede8c75afb0c6a7a3a.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">RAYBAN1</h4>
+	        <h5 class="jieshao">【保税发货】RAYBANS值得信赖的良心好产品</h5>
+	    	 <p>5472.00</p>
+             <p>（约￥1188.40）</p>
+             <s><p style="color:red">原价:6840THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=106" class="looksp" role="button" data-id="106">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/7e/e9/7ee929510c6a7f35203e9f504321aaff.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">RAYBAN2</h4>
+	        <h5 class="jieshao">【保税发货】RAYBAN值得信赖的良心好产品</h5>
+	    	 <p>5856.00</p>
+             <p>（约￥1271.80）</p>
+             <s><p style="color:red">原价:7320.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=107" class="looksp" role="button" data-id="107">查看商品</a></p>
+	    </div>
+	     <div class="rexiao2">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/43/48/4348499be03e46c02b6ff28506b81833.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">RAYBAN3</h4>
+	        <h5 class="jieshao">【保税发货】RAYBAN值得信赖的良心好产品</h5>
+	    	 <p>5184.00</p>
+             <p>（约￥1125.86）</p>
+             <s><p style="color:red">原价:6480.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=108" class="looksp" role="button" data-id="108">查看商品</a></p>
+	    </div>
+	    <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/32/85/328556ee6f26f8650978f0a591855eb2.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">RAYBAN4</h4>
+	        <h5 class="jieshao">【保税发货】RAYBAN值得信赖的良心好产品</h5>
+	    	 <p>4128.00</p>
+             <p>（约￥896.52）</p>
+             <s><p style="color:red">原价:5160.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=109" class="looksp" role="button" data-id="109">查看商品</a></p>
+	    </div>
+	     <div class="rexiao1">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/62/35/6235ed745379b0926e4eda671eb95b1e.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">RAYBAN5</h4>
+	        <h5 class="jieshao">【保税发货】RAYBAN值得信赖的良心好产品</h5>
+	    	 <p>6284.00</p>
+             <p>（约￥1364.75）</p>
+             <s><p style="color:red">原价:7854.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=110" class="looksp" role="button" data-id="110">查看商品</a></p>
+	    </div>
+	     <div class="rexiao2">
+	    	<div class="rexiao1_img"><img src="https://upload.taihaitao.com/image/be/87/be873cd61654e3b6800ba34bee32bda8.jpg@500w_500h"></div>
+	    	<p class="bq"><a class="bq1">特价</a><a class="bq2">促销</a></p>
+	    	<h4 class="spname">RAYBAN6</h4>
+	        <h5 class="jieshao">【保税发货】LOREAL PARIS值得信赖的良心好产品</h5>
+	    	 <p>4800.00</p>
+             <p>（约￥1042.46）</p>
+             <s><p style="color:red">原价:6000.00THB</p></s>
+              <p class="ph"><a class="jiarucar" role="button">加入购物车</a> <a href="./xiangqing.html?id=111" class="looksp" role="button" data-id="111">查看商品</a></p>
+	    </div>
+	     <div class="rexiao4">
+	    <a href="list.html"><img src="https://upload.taihaitao.com/image/a3/92/a3921049c481b57be28071c6c72607f8.jpg"></a>
+     	</div>
+     </div>
+     
+    <div class="foot">
+		<div class="foot1">
+			<ul class="foot_ul">
+				<h4>服务保障</h4>
+				<li>正品保障</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>新手指南</h4>
+				<li>常见问题</li>
+				<li>通关税费</li>
+				<li>支付方式</li>
+				<li>购物流程</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>客服中心</h4>
+				<li>联系客服</li>
+				<li>退换货流程</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>物流配送</h4>
+				<li>物流跟踪</li>
+				<li>配送方式</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>关于我们</h4>
+				<li>关于我们</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>泰国</h4>
+				<li>境内电话：<span style="color: #0B57A3;">1631</span></li>
+				<li>境外拨打：<span style="color: #0B57A3;">+66（0）26778899</span></li>
+				<li>中国：<span style="color: #0B57A3;">400-6301892</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="last">
+		<div class="last_img"><img src="../img/footimg.PNG"></div>
+	</div>
+	
+    
+	</div>
+	<!--顶部通栏-->
+	<div class="boss_dt">
+		<div class="dt">
+			<div class="header">
+				<div class="head">
+					
+					<div class="head1">
+						<div class="logo"><img src="../img/logo_01.png"></div>
+						<div class="sou">
+							<div>
+							<input type="text" class="sous" placeholder="直播" /><button class="btn">搜索</button>
+							</div>
+							<ul class="u1">
+								<li><a href="#">直播</a></li>
+								<li><a href="#">泰国值得买</a></li>
+								<li><a href="#">乳胶</a></li>
+								<li><a href="#">虎标</a></li>
+								<li><a href="#">燕窝</a></li>
+								<li><a href="#">果干</a></li>
+								<li><a href="#">Kingpower</a></li>
+								<li><a href="#">咖啡</a></li>
+								<li><a href="#">防晒</a></li>
+								<li><a href="#">驱蚊</a></li>
+								<li><a href="#">面膜</a></li>
+								<li><a href="#">Mistine</a></li>
+								<li><a href="#">鼻通</a></li>
+							</ul>
+						</div>
+						<div class="car">
+							<a href="cart.html"><h4>我的购物车<b class="num1"></b></h4></a>
+							<!--<div class="cars"><p>请  <a class="a1" href="dl.html">登录</a> 后查看</p></div>-->
+						</div>
+					</div>
+		</div>
+        <div class="dt1">返回顶部</div>
+	</div>
+	
+	
+		<script>
+		//登录注册js
+		//获取账号cookie
+		var span1=document.querySelector(".span1")
+		var name1=getCookie("name")
+		var a1=document.querySelector('.a1')
+		var cars=document.querySelector(".cars")
+        //判断当前cookie是否存在
+        if(name1){
+            //获取span对象
+            span1.innerHTML="欢迎！"+decodeURI(name1)
+        }else{
+//      	console.log("111")
+        }
+        
+        span1.onclick=function(){
+        	if(name1){
+        		a1.innerHTML='<a href="dl.html"><span class="span1">登录</span></a>'
+        		var a=confirm("确定退出登录？");
+        		if(a==true){
+        			a1.innerHTML='<a href="dl.html"><span class="span1">登录</span></a>'
+        			cars.innerHTML=`<p>请 <a class="a1" href="dl.html">登录</a> 后查看</p>`
+        		
+        		}else{
+        			location="index.html"
+        		}
+        	}else{
+        		location="dl.html"
+        	}
+        }
+        
+        //购物车
+//      if(span1.innerHTML=="登录"){
+//      	cars.innerHTML=`<p>请 <a class="a1" href="dl.html">登录</a> 后查看</p>`
+//      }else{
+//      	cars.innerHTML=`<p>购物车空空如也!</p>`
+//      }
+        
+        //二级菜单
+        //  获取host_sp下所有的li
+        $lis=$(".host_sp>li")
+         $host_sp1=$(".host_sp1")
+         $d2=$(".d2")
+        $(function(){
+        	$(".local_sp").hover(function(){
+        		$(".host_sp").stop().slideDown(300);
+        	},function(){
+        		$(".host_sp").stop().slideUp(500);
+        	})
+        	 
+        })
+
+        $(function(){
+        	 for(let i=0;i<$lis.length;i++){
+        	$lis.eq(i).mouseover(function(){
+        		$host_sp1.css("display","block")
+        		$host_sp1.html($lis.eq(i).html())
+        	})
+        }
+        })
+           
+    //swiper
+    var mySwiper = new Swiper ('.swiper-container', {
+//  direction: 'vertical', // 垂直切换选项
+    loop: true, // 循环模式选项
+    autoplay:true,
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+      el: '.swiper-pagination',
+	  clickable :true,
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // 如果需要滚动条
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  })     
+  
+  //热门商品
+    $(".huanyihuan").click(function(){
+    	if($(".img1").css("display")=="block"){
+    		$(".img1").css("display","none")
+    		$(".img2").css("display","block")
+    	}else{
+    		$(".img1").css("display","block")
+    		$(".img2").css("display","none")
+    	}
+    	
+    })
+    
+     //购物车的数量
+                    var num=document.querySelector(".num")
+			    	var cartList=localStorage.getItem("cartList")
+			    	//把当前cartList字符串转为数组对象
+			        cartList=JSON.parse(cartList)||[]
+			        var sum=0;
+			    	cartList.forEach(item=>{
+			    		sum+=item.num
+			    	})
+			    	num.innerHTML=sum
+			    	
+			    
+		</script>
+		<script type="text/javascript" src="../js/cookie.js" ></script>
+	    <script src="../js/jquery.js"></script>
+	    <script src="../js/ajax.js"></script>
+	    <script src="../js/index.js"></script>
+	</body>
+</html>

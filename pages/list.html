@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <style>
+        .pagination{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border:1px solid gray;
+            cursor: pointer;
+        }
+        .h5,ol{
+            display: inline-block;
+            white-space: nowrap;
+            width: 100%;
+            overflow: hidden;
+            text-overflow:ellipsis;
+        }
+        
+        
+        #boss{width: 100%;overflow-x:hidden;background-color: #f1f1f1;}
+			*{margin: 0;padding: 0;}
+			/*顶部*/
+			.top{width: 100%;height: 34px; background-color: rgb(245,245,245);overflow: hidden;}
+			.top1{width: 1100px;height: 34px; margin: auto;}
+			.left_nav{float: left;}
+			.left_nav li{float: left;font-size: 12px;line-height: 34px;margin-left: 10px;list-style: none;}
+			.right_nav{float: right;}
+			.right_nav li{float: right;font-size: 12px;line-height: 34px;margin-left: 20px; list-style: none;}
+			.right_nav li a{text-decoration: none;}
+			/*搜索购物车导航区域*/
+			.header{width: 100%;}
+			.head{width: 1100px;height: 144px;margin: auto;}
+			.head1{width: 1100px;height: 84px;}
+			.head2{width: 1100px;height: 60px;position: relative;}
+			.logo{width: 200px; height:60px;float: left;margin-top: 12px;}
+			.logo img{width: 100%;height: 100%;}
+			.sou{width: 550px;height: 60px;float: left;margin-top: 14px;margin-left: 100px;}
+			.sous{width: 470px;height: 32px;border: 2px solid rgb(11,86,164);border-right: none;box-sizing:content-box;float: left;outline: none;}
+			.btn1{width: 76px;height: 36px;font-size: 16px; float: left;background-color: rgb(2,152,181);color: white;outline: none;cursor: pointer;border: none;font-weight: bold;}
+			.u1{width: 550px;height: 24px;float: left;}
+			.u1 li{float: left;font-size: 12px;margin-right: 11px;list-style: none;line-height: 22px;}
+			.u1 li a{text-decoration: none;color: gray;}
+			.car{width: 128px;height: 34px;border: 1px solid rgb(11,86,164);float: left;margin-top: 14px;margin-left: 30px; position: relative;background-color: whitesmoke;}
+			.car h4{line-height: 26px;text-align: center;}
+			.cars{position: absolute;width: 280px;height: 100px;background-color: whitesmoke;left: -150px;box-shadow: 1px 1px 2px gray; border-top: none;display: none;z-index: 100;top:34px;}
+			.cars p{line-height: 100px;text-align: center;font-size: 14px;}
+			.car:hover{border: none;}
+			.car:hover .cars{display: block;}
+			.local_sp{width: 200px;height: 60px; background: linear-gradient(#01a8ba,#0a5aa5);position: relative;float: left;}
+			.local_sp p{line-height:60px;text-align: center;color: white;}
+			.host_sp{position: absolute;width: 200px;height: 500px;background-color: rgba(229,229,229,0.3);display: none;z-index: 100;position: relative;}
+			.host_sp li{list-style: none;border-bottom:1px solid gray;width:200px;height:49px;line-height: 49px;text-align: center;}
+			.host_sp li:hover{background-color: rgb(229,229,229);}
+			.host_sp1{width: 1000px;height:500px; position:absolute;background-color: rgb(229,220,229);z-index: 100;display: none;top: 0px;left: 200px;}
+			.u2{float: left;margin-left: 20px;}
+			.u2 li{float: left;line-height: 60px;list-style: none;margin-left: 30px;}
+			.u2 li a{text-decoration: none;color: black;}
+			.u2 li a:hover{color:rgb(2,152,181) ;}
+			
+			
+			#cz{width: 100%;height: 60px;}
+			.u3{width: 1200px;float: left;height: 30px;}
+			.u3 li{float: left;list-style: none;margin-right:20px;width: 80px;height: 30px;line-height: 30px;text-align: center;border: 1px solid gray;cursor: pointer;}
+			.u3 li a{color: black;}
+			.u3 li .bg{color: #0B57A3;display: inline-block;width: 80px;height: 30px;background-color: darkgray;}
+			
+			.thumbnail{position: relative;}
+			.ph a{margin-left: 10px;width: 100px;}
+			.ph{display: none;position: absolute;top: 220px;}
+			.thumbnail:hover .ph{display: block;}
+			
+			
+			.foot{width: 100%;background-color: white;margin-top: 30px;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede;}
+            .foot1{width: 1200px;height: 160px;margin: auto;display: flex;justify-content: space-between;background-color: white;}
+            .foot_ul{float: left;}
+            .foot_ul h4{color: gray;margin-top: 20px;margin-bottom: 10px;}
+            .foot_ul li{line-height: 24px;font-size: 12px;color: gray;}
+            
+             .last1{width: 100%;background-color: white;border-top: 1px solid #dedede;border-bottom: 1px solid #dedede;}
+            .last_img{width: 560px;height: 132px;margin: auto;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="boss">
+			<!--顶部-->
+			<div class="top">
+				<div class="top1">
+					<ul class="left_nav">
+						<li>King power中文官网<span style="margin-left: 10px;margin-right: 10px;">|</span></li>
+						<li>泰.海淘</li>
+						<li>今日汇率:</li>
+						<li>泰铢<b>—></b>人民币</li>
+						<li>支付宝 0.2212</li>
+						<li>银联 0.2179</li>
+						<li>微信 0.2166<span style="display: inline-block;height: 16px;width: 16px;border-radius: 50%;color: orange; border: 2px solid orange;line-height: 16px;"><b>荐</b></span></li>
+					</ul>
+					
+					<ul class="right_nav">
+						<li><a href="#">手机版</a></li>
+						<li><a href="#">客服中心</a></li>
+						<li><a href="#">个人中心</a></li>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="zc.html">注册</a></li>
+						<li class="a1"style="cursor: pointer;"><!--<a href="dl.html"><span class="span1">登录</span></a>--><span class="span1">登录</span></li>
+				   </ul>
+				</div>
+			</div>
+			<!--顶部-->
+			
+			<!--搜索购物车导航区域-->
+			<div class="header">
+				<div class="head">
+					
+					<div class="head1">
+						<div class="logo"><img src="../img/logo_01.png"></div>
+						<div class="sou">
+							<div>
+							<input type="text" class="sous" placeholder="直播" /><button class="btn1">搜索</button>
+							</div>
+							<ul class="u1">
+								<li><a href="#">直播</a></li>
+								<li><a href="#">泰国值得买</a></li>
+								<li><a href="#">乳胶</a></li>
+								<li><a href="#">虎标</a></li>
+								<li><a href="#">燕窝</a></li>
+								<li><a href="#">果干</a></li>
+								<li><a href="#">Kingpower</a></li>
+								<li><a href="#">咖啡</a></li>
+								<li><a href="#">防晒</a></li>
+								<li><a href="#">驱蚊</a></li>
+								<li><a href="#">面膜</a></li>
+								<li><a href="#">Mistine</a></li>
+								<li><a href="#">鼻通</a></li>
+							</ul>
+						</div>
+						<div class="car">
+							<a href="cart.html"><h4>购物车<b class="num">0</b>件</h4></a>
+							<!--<div class="cars"><p>请  <a class="a1" href="dl.html">登录</a> 后查看</p></div>-->
+						</div>
+					</div>
+					
+					<div class="head2">
+						<div class="local_sp"><p>本土商品▽</p>
+								<ul class="host_sp">
+								<li>食品特产</li>
+								<li>粮油调味</li>
+								<li>咖啡冲饮</li>
+								<li>美容护肤</li>
+								<li>彩妆香水</li>
+								<li>居家日用</li>
+								<li>滋补保健</li>
+								<li>服装鞋包</li>
+								<li>家居饰品</li>
+								<li>洗护清洁剂</li>
+								<div class="host_sp1"></div>
+							</ul>
+							
+						</div>
+						
+						<ul class="u2">
+							<li><a href="index.html">首页</a></li>
+							<li><a href="#"style="color:#01a8ba;">热销排行</a></li>
+							<li><a href="#">美容护肤</a></li>
+							<li><a href="#">彩妆香水</a></li>
+							<li><a href="#">咖啡冲饮</a></li>
+							<li><a href="#">神奇药膏</a></li>
+							<li><a href="#">果干零食</a></li>
+							<li><a href="#">一村一品</a></li>	
+				        </ul>
+						
+					</div>
+				</div>
+			</div>
+			
+			<div id="cz">
+				<ul class="u3">
+				<li><a href="list.html" class="aa bg">全部</a></li>
+				<li class="k"><a class="aa">咖啡冲饮</a></li>
+				<li class="m"><a class="aa">美容护肤</a></li>
+				<li class="z"><a class="aa">滋补保健</a></li>
+				<li class="s"><a class="aa">食品特产</a></li>
+				<li class="x"><a class="aa">洗护清洁剂</a></li>
+				<li class="mj"><a class="aa">墨镜</a></li>
+				
+			</ul>
+			</div>
+			
+		<div class="mold">
+        <div class="row"></div>
+        <div class="pagination"></div>
+        </div>
+        
+        <div class="foot">
+		<div class="foot1">
+			<ul class="foot_ul">
+				<h4>服务保障</h4>
+				<li>正品保障</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>新手指南</h4>
+				<li>常见问题</li>
+				<li>通关税费</li>
+				<li>支付方式</li>
+				<li>购物流程</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>客服中心</h4>
+				<li>联系客服</li>
+				<li>退换货流程</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>物流配送</h4>
+				<li>物流跟踪</li>
+				<li>配送方式</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>关于我们</h4>
+				<li>关于我们</li>
+			</ul>
+			<ul class="foot_ul">
+				<h4>泰国</h4>
+				<li>境内电话：<span style="color: #0B57A3;">1631</span></li>
+				<li>境外拨打：<span style="color: #0B57A3;">+66（0）26778899</span></li>
+				<li>中国：<span style="color: #0B57A3;">400-6301892</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="last1">
+		<div class="last_img"><img src="../img/footimg.PNG"></div>
+	</div>
+	
+    </div>
+    
+    
+    <script>
+    	var row=document.querySelector(".mold")
+    	var arr=[];
+    	row.onclick=function(e){
+    		var e=e||window.event
+    	    var target=e.target||e.srcElement	    
+    	    
+    	    if(target.innerHTML=='加入购物车'){
+    	    	//图片地址
+                var imgurl=target.parentNode.parentNode.previousElementSibling.getAttribute("src")
+                //标题
+                var title=target.parentNode.parentNode.firstElementChild.innerHTML
+                //价格
+                var price=target.parentNode.previousElementSibling.previousElementSibling.innerHTML
+                var id=target.nextElementSibling.getAttribute("data-id")
+                
+                var jiage=target.parentNode.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML
+                //创建存储一条数据的对象
+                
+                var obj1={
+                	 id:id,
+                	 imgUrl:imgurl,
+                     name:title,
+                     rmb:price,
+                     num:1,
+                     jiage:jiage,
+                }
+                     //购物车的数量
+                    var num=document.querySelector(".num")
+			    	var cartList=localStorage.getItem("cartList")
+			    	//把当前cartList字符串转为数组对象
+			        cartList=JSON.parse(cartList)||[]
+			        var sum=0;
+			    	cartList.forEach(item=>{
+			    		sum+=item.num
+			    	})
+			    	num.innerHTML=sum
+                
+                
+                
+                  //获取localStorage中的cartList
+                var cartList=localStorage.getItem('cartList')
+                 //判断当前localStorage中是否存在cartList
+                if(cartList){
+                    //把从localStorage中获取的字符串转为数组对象
+                    cartList=JSON.parse(cartList)
+                    var a=0 //代码当前商品是否存在与localStorage中相同的
+                    //遍历数组中所有的元素
+                    cartList.forEach(function(item){
+                        //判断当前要添加的元素是否在localStorage中存在
+                        if(item['name']===title){
+                            a++
+                            item['num']++
+                        }
+                    })
+                    //判断当前a是否为true
+                    if(a==0){
+                        cartList.push(obj1)
+                    }
+                    //修改localStorage中的内容
+                    localStorage.setItem('cartList',JSON.stringify(cartList))
+                   }else{
+                   	   //把当前要添加的商品存放在数组中
+                    var arr=[obj1]
+                    //把当前数组添加到localStorage中
+                    localStorage.setItem('cartList',JSON.stringify(arr))
+                    
+                   }
+    	    }
+    	}
+    	
+    	 
+    </script>
+    
+    
+    
+    
+    <script type="text/javascript" src="../js/cookie.js" ></script>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/pagination.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script src="../js/list.js"></script>
+</body>
+</html>
